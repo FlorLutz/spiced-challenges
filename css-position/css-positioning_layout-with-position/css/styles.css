@@ -26,6 +26,7 @@ body {
   top: 0;
   width: 100%;
   padding-left: 50px;
+  z-index: 1;
   /* last one to make it look nicer */
 }
 
@@ -62,6 +63,7 @@ body {
   padding: 3% 10%;
   scroll-margin-top: 100px;
   border-radius: 2rem;
+  position: relative;
 }
 
 .card__heading {
@@ -77,6 +79,10 @@ body {
   padding: 6px 12px;
   border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  /* 0 values make it look bad, so I added a few px */
 }
 
 /**
@@ -96,4 +102,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
 }
