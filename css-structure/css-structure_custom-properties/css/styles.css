@@ -8,6 +8,8 @@
   --color-black-light: #303030;
   --color-primary: #8236ff;
   --color-white: #ffffff;
+  --padding-large: 16px;
+  --border-radius-small: 4px;
 }
 
 body {
@@ -27,7 +29,7 @@ h1 {
   margin: 0;
   letter-spacing: 0.025em;
   text-transform: uppercase;
-  padding-block: 16px;
+  padding-block: var(--padding-large);
 }
 
 h2 {
@@ -42,7 +44,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
-  padding: 16px;
+  padding: var(--padding-large);
   width: min(1000px, 100%);
   margin: 0 auto;
 }
@@ -64,7 +66,7 @@ figure {
   margin: 0;
   padding: 10px;
   background-color: var(--color-primary);
-  border-radius: 4px;
+  border-radius: var(--border-radius-small);
 }
 
 figcaption {
@@ -81,7 +83,7 @@ a {
   display: inline-block;
   font-size: smaller;
   padding: 8px;
-  border-radius: 4px;
+  border-radius: var(--border-radius-small);
   background-color: var(--color-primary);
   color: var(--color-white);
 }
@@ -95,7 +97,7 @@ a:focus-visible {
 mark {
   background-color: var(--color-primary);
   color: var(--color-white);
-  border-radius: 4px;
+  border-radius: var(--border-radius-small);
   letter-spacing: 0.025em;
 }
 
