@@ -1,16 +1,16 @@
 :root {
-    --primary-dark: #2E016D;
-    --primary: #3F0097;
-    --primary-light: #8236FF;
-    --secondary-dark: #38CCDA;
-    --secondary: #7fD9E2;
-    --accent: #FFD15D;
+  --primary-dark: #2E016D;
+  --primary: #3F0097;
+  --primary-light: #8236FF;
+  --secondary-dark: #38CCDA;
+  --secondary: #7fD9E2;
+  --accent: #FFD15D;
 
-    --black-light: #303030;
-    --black: #000000;
-    --white: #FFFFFF;
-    --grey-dark: #B6B9C2;
-    --grey-light: #F5F6F6;
+  --black-light: #303030;
+  --black: #000000;
+  --white: #FFFFFF;
+  --grey-dark: #B6B9C2;
+  --grey-light: #F5F6F6;
 }
 
 * {
@@ -30,10 +30,17 @@ body {
   color: var(--white);
 }
 
+.profile {
+  display: flex;
+  justify-content: center;
+}
+
 .profile__image {
   border-radius: 50%;
   max-width: 50%;
   height: auto;
+  align-self: center;
+  display: inline;
 }
 
 .tech-stack__list {
