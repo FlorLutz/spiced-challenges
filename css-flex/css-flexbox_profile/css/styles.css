@@ -33,6 +33,7 @@ body {
 .profile {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 .profile__image {
@@ -40,7 +41,6 @@ body {
   max-width: 50%;
   height: auto;
   align-self: center;
-  display: inline;
 }
 
 .tech-stack__list {
