@@ -43,6 +43,9 @@ body {
   min-height: 100vh;
 
   /* Add styles to the grid container */
+  display: grid;
+  grid-template-columns: 400px 400px;
+  grid-template-rows: 200px 200px;
 }
 
 .teaser-grid__teaser {
@@ -58,14 +61,17 @@ body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("https://source.unsplash.com/random/600x300?spring");
 }
+
 .teaser-grid__teaser--summer {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("https://source.unsplash.com/random/600x300?summer");
 }
+
 .teaser-grid__teaser--autumn {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("https://source.unsplash.com/random/600x300?autumn");
 }
+
 .teaser-grid__teaser--winter {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("https://source.unsplash.com/random/600x300?winter");
