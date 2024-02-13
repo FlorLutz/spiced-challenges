@@ -39,3 +39,5 @@ true
 "false"
 true
 */
+
+console.log("Hi!" + 5 + 9);
