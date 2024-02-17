@@ -14,3 +14,23 @@ Implement the following functionality:
 const firstInput = document.querySelector("[data-js=first-input]");
 const secondInput = document.querySelector("[data-js=second-input]");
 const button = document.querySelector("[data-js=button]");
+
+//the first 2 tasks are commented out instead of creating forks
+
+// -- 1 --
+// button.addEventListener("click", () => {
+//   secondInput.value = firstInput.value;
+// });
+
+// -- 2 --
+// button.addEventListener("click", () => {
+//   secondInput.value = firstInput.value.toUpperCase();
+// });
+
+// -- 3 --
+button.addEventListener("click", () => {
+  const firstValue = firstInput.value;
+  const secondValue = secondInput.value;
+  firstInput.value = secondValue;
+  secondInput.value = firstValue;
+});
