@@ -16,3 +16,22 @@ For further information check MDN:
 - about CSS declarations with "style": https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
 
 */
+const box = document.querySelector('[data-js="box"]');
+const colorInput = document.querySelector('[data-js="input-color"]');
+const borderRadiusInput = document.querySelector('[data-js="input-radius"]');
+const rotationInput = document.querySelector('[data-js="input-rotation"]');
+
+colorInput.addEventListener("input", () => {
+  box.style.backgroundColor = `hsl(${colorInput.value} 70% 60%)`;
+});
+borderRadiusInput.addEventListener("input", () => {
+  box.style.borderRadius = borderRadiusInput.value + "%";
+});
+rotationInput.addEventListener("input", () => {
+  box.style.transform = `rotate(${rotationInput.value}deg)`;
+});
+
+// example for rewrtiing it to get value from special event:
+// borderRadiusInput.addEventListener("input", (e) => {
+//     box.style.borderRadius = e.value + "%";
+//   });
