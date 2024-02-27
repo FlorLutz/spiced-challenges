@@ -47,16 +47,17 @@ async function fetchDataAndRender() {
     const data = await response.json();
     console.log("data:", data);
     console.log("data.results:", data.results);
-    // data.results.forEach((character) => {
-    //   const newCard = Card(character);
-    //   renderElement(newCard);
-    // });
-
-    const characters = data.results;
-    for (element of characters) {
-      const newCard = Card(element);
+    data.results.forEach((character) => {
+      const newCard = Card(character);
       renderElement(newCard);
-    }
+    });
+
+    // alternative with for-of-loop:
+    // const characters = data.results;
+    // for (const element of characters) {
+    //   const newCard = Card(element);
+    //   renderElement(newCard);
+    // }
   } catch (error) {
     console.error(error);
   }
