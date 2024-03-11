@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { uid } from "uid";
 import Form from "./components/Form";
 import List from "./components/List";
 import "./App.css";
@@ -25,7 +26,8 @@ export default function App() {
   const [animals, setAnimals] = useState(initialAnimals);
 
   function handleAddAnimal(newAnimal) {
-    console.log(newAnimal);
+    newAnimal.id = uid();
+    setAnimals([...animals, newAnimal]);
   }
 
   return (
