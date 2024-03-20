@@ -2,6 +2,8 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import Input from ".";
 
+// beforeEach can help to render a jsx before every test, but here it makes no sense because of the props
+
 test("renders a label and an input with the correct attributes", () => {
   render(
     <Input
@@ -21,24 +23,24 @@ test("renders a label and an input with the correct attributes", () => {
 });
 
 test("calls callback on every user input", async () => {
-  const handleChange = jest.fn();
+  const mockFunction = jest.fn();
+  const user = userEvent.setup();
 
   render(
     <Input
       name="nameOfGame"
       labelText="Name of game"
       placeholder="e.g. Dodelido"
-      onChange={handleChange}
+      onChange={mockFunction}
       required
     />
   );
 
-  const user = userEvent.setup();
   const inputField = screen.getByRole("textbox");
 
-  await user.type(inputField, "W");
-  await user.type(inputField, "o");
-  await user.type(inputField, "W");
+  await user.type(inputField, "CandyCrash");
+  await user.type(inputField, " ");
+  await user.type(inputField, "2");
 
-  expect(handleChange).toHaveBeenCalledTimes(3);
+  expect(mockFunction).toHaveBeenCalledTimes(12); // can be used with .not in front to check for the contrary
 });
