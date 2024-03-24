@@ -1,7 +1,15 @@
 import "./App.css";
+import { useState } from "react";
 
 export default function App() {
-  let code = "?";
+  const [code, setCode] = useState("");
+  console.log(code);
+  function handleClick(fish) {
+    setCode(code + fish);
+  }
+  function resetClick() {
+    setCode("");
+  }
 
   const validCode = "🐡🐠🐋";
 
@@ -11,6 +19,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
+            handleClick("🐡");
             console.log("Update Code!");
           }}
         >
@@ -21,6 +30,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
+            handleClick("🐋");
             console.log("Update Code!");
           }}
         >
@@ -31,6 +41,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
+            handleClick("🐠");
             console.log("Update Code!");
           }}
         >
@@ -43,6 +54,7 @@ export default function App() {
       <button
         type="button"
         onClick={() => {
+          resetClick();
           console.log("Reset Code!");
         }}
       >
