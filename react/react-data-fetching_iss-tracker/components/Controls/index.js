@@ -7,8 +7,8 @@ import {
 export default function Controls({ longitude, latitude, onRefresh }) {
   return (
     <ControlsContainer>
-      <ControlsDisplay>Lat: {longitude.toFixed(5)}</ControlsDisplay>
-      <ControlsDisplay>Long: {latitude.toFixed(5)}</ControlsDisplay>
+      <ControlsDisplay>Long: {longitude.toFixed(5)}</ControlsDisplay>
+      <ControlsDisplay>Lat: {latitude.toFixed(5)}</ControlsDisplay>
       <ControlsButton type="button" onClick={onRefresh}>
         Refresh
       </ControlsButton>
