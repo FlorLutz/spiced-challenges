@@ -16,6 +16,9 @@ export default function Product() {
   if (!data) {
     return;
   }
+  if (data.reviews) {
+    console.log(data.reviews);
+  }
 
   return (
     <ProductCard>
@@ -25,6 +28,18 @@ export default function Product() {
         Price: {data.price} {data.currency}
       </p>
       <StyledLink href="/">Back to all</StyledLink>
+      {data.reviews.length > 0 && <h2>reviews</h2>}
+      {data.reviews &&
+        data.reviews.map((review) => {
+          return (
+            <>
+              <strong>{review.title}</strong>
+              <br></br>
+              <p>{review.text}</p>
+              <p>{`rating: ${review.rating}`}</p>
+            </>
+          );
+        })}
     </ProductCard>
   );
 }
