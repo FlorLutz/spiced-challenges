@@ -1,6 +1,7 @@
 import useSWR from "swr";
 import { useRouter } from "next/router";
 import { ProductCard } from "./Product.styled";
+import Comments from "../Comments";
 import { StyledLink } from "../Link/Link.styled";
 
 export default function Product() {
@@ -10,7 +11,6 @@ export default function Product() {
   const { data, isLoading } = useSWR(`/api/products/${id}`);
 
   if (isLoading) {
-    console.log("Productcomponent running");
     return <h1>Loading...</h1>;
   }
 
@@ -25,6 +25,7 @@ export default function Product() {
       <p>
         Price: {data.price} {data.currency}
       </p>
+      {data.reviews.length > 0 && <Comments reviews={data.reviews} />}
       <StyledLink href="/">Back to all</StyledLink>
     </ProductCard>
   );
